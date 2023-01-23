@@ -6,16 +6,17 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import pt.ipmaia.dariorecipes.databinding.RecipesRowLayoutBinding
 import pt.ipmaia.dariorecipes.models.FoodRecipe
+import pt.ipmaia.dariorecipes.models.Result
 import pt.ipmaia.dariorecipes.util.RecipesDiffUtil
 
 class RecipesAdapter : RecyclerView.Adapter<RecipesAdapter.MyViewHolder>() {
 
-    private var recipes = emptyList<pt.ipmaia.dariorecipes.models.Result>()
+    private var recipes = emptyList<Result>()
 
     class MyViewHolder(private val binding: RecipesRowLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(result: pt.ipmaia.dariorecipes.models.Result){
+        fun bind(result: Result){
             binding.result = result
             binding.executePendingBindings()
         }
